@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RITAROO Presale - Join the Future of Web3 & Pets</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #1a1a1a;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 50px;
+        }
+        h1 {
+            font-size: 3rem;
+            color: #ff9900;
+        }
+        p {
+            font-size: 1.2rem;
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 20px;
+            font-size: 1.2rem;
+            color: white;
+            background-color: #ff9900;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: #e68a00;
+        }
+        .wallet-connect {
+            margin-top: 30px;
+        }
+    </style>
+    <script>
+        async function connectWallet() {
+            if (window.solana && window.solana.isPhantom) {
+                try {
+                    const response = await window.solana.connect();
+                    alert("Wallet connected: " + response.publicKey.toString());
+                } catch (err) {
+                    alert("Wallet connection failed!");
+                }
+            } else {
+                alert("Phantom Wallet not found. Please install it.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <img src="ritaroo-logo.png" alt="$RITAROO Token" width="200">
+        <h1>Join the $RITAROO Presale!</h1>
+        <p>The first Web3-powered pet business merging NFTs, gaming, and blockchain innovation!</p>
+        <p>🚀 Secure your $RITAROO tokens before the public sale!</p>
+        <div class="wallet-connect">
+            <button class="btn" onclick="connectWallet()">Connect Wallet</button>
+        </div>
+        <a href="https://t.me/+v9iNuUZBEu8xMDIx" class="btn">Join Telegram</a>
+        <a href="https://discord.gg/xuBZSPUQ" class="btn">Join Discord</a>
+    </div>
+</body>
+</html>
